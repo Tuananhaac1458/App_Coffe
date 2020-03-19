@@ -1,0 +1,314 @@
+{
+	"dataTintucAmericano": [
+  {
+    "id":1,
+    "image":'http://secureservercdn.net/198.71.233.68/sk5.a50.myftpupload.com/wp-content/uploads/2020/01/food-truck-golf-3-400x225.jpg',
+    "title":'READ ABOUT THE ROASTING PROCESS',
+    "content":''
+  },
+  {
+  "id": 2,
+  "image":'http://secureservercdn.net/198.71.233.68/sk5.a50.myftpupload.com/wp-content/uploads/2020/01/container-2.jpg',
+  "title":'SEE ALL OUR LOCATIONS IN AMERICANO',
+  "content":''
+  },
+  {
+  "id":3,
+  "image":'http://secureservercdn.net/198.71.233.68/sk5.a50.myftpupload.com/wp-content/uploads/2020/01/Menu-01.png',
+  "title":'TAKE A LOOK AT OUR MENU',
+  "content":'',
+  "url":'http://americanoacademy.com/our-menu-2/'
+  },
+  {
+  "id":4,
+  "image":'http://secureservercdn.net/198.71.233.68/sk5.a50.myftpupload.com/wp-content/uploads/2020/01/Menu-02.jpg',
+  "title":'READ OUR CAFE STORY',
+  "content":''
+  }
+],
+	"dataTintuc": [
+  {
+    "id":1,
+    "image":'https://file.hstatic.net/1000075078/article/hibiscus_banner_blog_464ece674ae8482f910aa3bc301a3b95_a4e4212b9763403a9a0af4d5e101cad7_1024x1024.jpg',
+    "title":'Sẻ chia vị tết cùng bộ 3 món mới từ the coffee house',
+    "content":'Từ ngày 06/01, mời bạn đến Nhà Sẻ chia vị Tết với những cuộc hẹn chân thành cùng bộ 3 món mới nhé!'
+  },
+  {
+  "id": 2,
+  "image":'https://file.hstatic.net/1000075078/article/csr_banner_blog_c47ae16a63134e1c94a24164f1974f77_0195831415ba44ada4369f27f6276646_grande.jpg',
+  "title":'Hành trình "Cảm ơn những người hùng thầm lặng"',
+  "content":'Và Tết này The Coffee House bắt đầu dự án “Cảm ơn những người hùng thầm lặng", dành tặng những tấm lòng luôn tận tâm vì người khác, họ là những Hiệp sỹ đường phố, các anh chị nhân viên Vệ sinh đang giữ gìn mỹ quan đô thị, hay những Nữ Tu Sỹ tại các mái ấm tình thương, họ đang làm công việc ý nghĩa cho xã hội mà đôi khi chằng cần phải nhận lại hay đền đáp.'
+  },
+  {
+  "id":3,
+  "image":'https://file.hstatic.net/1000075078/article/qua_tet_banner_blog_96b781e3519e41518fab0c86507c7434_2f8f2148a7b9457583c04f65f6cd8036_grande.jpg',
+  "title":'Cùng Nhà mang "Tết" về nhà',
+  "content":'Tết này hãy để Nhà khơi lại những câu chuyện chân thành cùng bạn, qua những món quà đặc biệt của Nhà nhé. '
+  },
+  {
+  "id":4,
+  "image":'https://file.hstatic.net/1000075078/article/travel_mug_banner_blog_6adcfb769ff74b7793b3bdb45d27ccc6_grande.jpg',
+  "title":'Bộ ly sứ Travel Mug từ The Coffee House - Mang theo cả thành phố bạn từng yêu',
+  "content":'Lại thêm 1 món quà The Coffee House mang đến cho bạn nhân dịp năm mới 2020 - bộ sưu tập “Travel Mug” với phiên bản giới hạn, cho những...'
+  },
+  {
+  "id":5,
+  "image":'https://file.hstatic.net/1000075078/article/tch_x_noelbui_1200x450_0e2cd1a6b5eb4b1a8123203299287c50_b2e852a5208a4b70a655fb5ce89c0a7d_master.jpg',
+  "title":'Gửi chân thành, trao yêu thương cùng the coffee house',
+  "content":'Noel là mùa của ấm áp và yêu thương. Là dịp trao nhau những món quà nhỏ, hẹn hò dạo phố, hay đơn giản là bữa cơm gia đình trong không khí se lạnh đêm Giáng Sinh. Nhưng không phải ai cũng được hưởng trọn hơi ấm ấy trong đêm Noel này, đúng không?'
+  },
+
+],
+	"dataWhatnew": [
+  {
+    "id":1,
+    "image":'https://file.hstatic.net/1000075078/article/blog_130c5cbf52e442b6ba6dcf45e38f2680_grande.jpg',
+    "title":'Chiến dịch giảm ống hút tại The Coffee House - ',
+    "content":'Từ tháng 10/2019, The Coffee House sẽ bắt đầu hành động giảm thiểu ống hút nhựa sử dụng 1 lần tại toàn bộ hệ thống. Cụ thể là The Coffee...'
+  },
+  {
+  "id": 2,
+  "image":'https://file.hstatic.net/1000075078/article/cover_fb_800x300_c97ded2d90324c2486b5954c37b6bdc5_grande.jpg',
+  "title":'Lễ hội macchiato - thêm cảm hứng, thêm vui!',
+  "content":'Đến hẹn lại lên, Mùa Lễ Hội Macchiato đã quay trở lại! Hãy sẵn sàng xóa tan cơn nắng mưa thất thường, để hòa mình vào Lễ Hội Macchiato đầy...'
+  },
+  {
+  "id":3,
+  "image":'https://file.hstatic.net/1000075078/article/tch_video_design_02_be33c39f38294d0380014fbdcdc135e7_grande.jpg',
+  "title":'Giải đáp thắc mắc của bạn với chương trình khách hàng thân thiết mới',
+  "content":'Từ ngày 23/09, The Coffee House sẽ ra mắt Chương trình khách hàng thân thiết - The Coffee House Rewards mới thông qua ứng dụng The Coffee House, với những... '
+  },
+  {
+  "id":4,
+  "image":'https://file.hstatic.net/1000075078/article/_2ff56aa17382400c990f52191f208ec8_8347e74c6266406b8fc9c4706f01149b_964e0cbe297b4a78892e271fa0893373_grande.png',
+  "title":'Chương trình khách hàng thân thiết mới và những điều có thể bạn chưa biết',
+  "content":'Từ ngày 23/09, The Coffee House sẽ ra mắt Chương trình khách hàng thân thiết - The Coffee House Rewards mới thông qua ứng dụng The Coffee House, với những..'
+  },
+  {
+  "id":5,
+  "image":'https://file.hstatic.net/1000075078/article/0914-tch-p5-800x300_c0e092305fd042399a734b725eb6ad5b_grande.jpg',
+  "title":'The coffee house - 5 năm hoạt động vì cộng đồng',
+  "content":'Ngay từ những ngày đầu, The Coffee House luôn lấy con người làm trọng tâm cho mọi quyết định và sản phẩm. Chúng tôi tin rằng, một không gian cà...'
+  },
+
+],
+"dataVocher" :[
+  {
+    "id":1,
+    "image":'https://file.hstatic.net/1000075078/file/reward_voucher20_30415a8abe994887b18ac9a42e4b1f38.png',
+    "title":'01 CASH VOUCHER 20.000đ',
+    "content":'Chi can 500 BEAN 01 cash voucher 20.000đ'
+  },
+  {
+  "id": 2,
+  "image":'https://file.hstatic.net/1000075078/file/reward_banhngot_51a4abd587654d61b213fe2fb93cbe04.png',
+  "title":'01 PHẦN BÁNH NGỌT',
+  "content":'Chi can 660 BEAN bạn đã nhận được 01 phần bánh ngọt bất kỳ'
+  },
+  {
+  "id":3,
+  "image":'https://file.hstatic.net/1000075078/file/reward_cpg_c6750d3556254ebaac12fa7ff69bced2.png',
+  "title":'TÚI CÀ PHÊ TCH',
+  "content":'Chi can 1200 BEAN bạn đã nhận được 01 Túi Cà Phê The Coffee House 250gr'
+  },
+  {
+  "id":4,
+  "image":'https://file.hstatic.net/1000075078/file/reward_tumbler2_ee38d8e0502544a3890d6e60cd0b171c.png',
+  "title":'BÌNH TUMBLER INOX',
+  "content":'Chi can 5700 BEAN  bạn đã nhận được 01 bình inox TCH 500ml'
+  },
+  {
+  "id":5,
+  "image":'https://file.hstatic.net/1000075078/file/reward_coldbrew_4c3269f0bd494f3fa70c836bc5075d4c.png',
+  "title":'01 PHẦN COLD BREW',
+  "content":'Chi can 1200 BEAN bạn đã nhận được 01 ly Cold Brew thời thượng bất kỳ'
+  },
+
+],
+
+  "dataProduct" :[  
+      {
+          "id":"555",
+          "image":"https://product.hstatic.net/1000075078/product/matcha_macchiato.jpg",
+          "name":"Matcha Machiato",
+          "Price": 20000,
+          "loved": false,
+          "arrSize":[{"id":123, "nameSize": "Loai L", "PlusPrice": 0, "selected":true},{"id":345, "nameSize": "Loai XL", "PlusPrice": 15000,"selected":false}],
+          "arrTopping":[{"id":123, "nameTopping": "Extra foanm", "PlusPrice": 5000, "selected":false},{"id":345, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false}],
+          "description":"Uong deo no bung dc dau"
+      },
+        {
+          "id":"55",
+          "image":"https://product.hstatic.net/1000075078/product/matcha_macchiato.jpg",
+          "name":"SINH TỐ VIỆT QUẤT",
+          "Price": 59000,
+          "loved": false,
+          "arrSize":[{"id":123, "nameSize": "Loai L", "PlusPrice": 0, "selected":true},{"id":345, "nameSize": "Loai XL", "PlusPrice": 15000,"selected":false},{"id":1234, "nameSize": "Loai XXL", "PlusPrice": 20000, "selected":false}],
+          "arrTopping":[{"id":3452, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false},{"id":3451, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false},{"id":345, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false},{"id":1231, "nameTopping": "Thêm VIỆT QUẤT ", "PlusPrice": 5000, "selected":false},{"id":1232, "nameTopping": "Thêm đá", "PlusPrice": 5000, "selected":false},],
+          "description":"Uong deo no bung dc dau"
+      },
+       {
+          "id":"123",
+          "image":"https://product.hstatic.net/1000075078/product/white_vnese_coffee_9968c1184d7f4634a9bb9fce7b5ff313_master.jpg",
+          "name":"Bạc Sỉu",
+          "Price": 29000,
+          "loved": false,
+          "arrSize":[{"id":123, "nameSize": "Loai L", "PlusPrice": 0, "selected":true},{"id":345, "nameSize": "Loai XL", "PlusPrice": 15000,"selected":false}],
+          "arrTopping":[],
+          "description":"Theo chân những người gốc Hoa đến định cư tại Sài Gòn, Bạc sỉu là cách gọi tắt của 'Bạc tẩy sỉu phé' trong tiếng Quảng Đông, chính là: Ly sữa trắng kèm một chút cà phê."
+      },
+       {
+          "id":"1233",
+          "image":"https://product.hstatic.net/1000075078/product/cappuccino_master.jpg",
+          "name":"CAPPUCINNO",
+          "Price": 45000,
+          "loved": false,
+          "arrSize":[],
+          "arrTopping":[],
+          "description":"Cappuccino được gọi vui là thức uống một-phần-ba - 1/3 Espresso, 1/3 Sữa nóng, 1/3 Foam"
+      },
+
+  ],
+
+  "dataProductStore" : [
+    {
+      "id":1,
+      "tabLabel": "Best Sell",
+      "dataProduct":[
+            {
+              "id":"555",
+              "image":"https://product.hstatic.net/1000075078/product/matcha_macchiato.jpg",
+              "name":"Matcha Machiato",
+              "Price": 20000,
+              "loved": false,
+              "arrSize":[{"id":123, "nameSize": "Loai L", "PlusPrice": 0, "selected":true},{"id":345, "nameSize": "Loai XL", "PlusPrice": 15000,"selected":false}],
+              "arrTopping":[{"id":123, "nameTopping": "Extra foanm", "PlusPrice": 5000, "selected":false},{"id":345, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false}],
+              "description":"Uong deo no bung dc dau"
+            },
+            {
+              "id":"55",
+              "image":"https://product.hstatic.net/1000075078/product/matcha_macchiato.jpg",
+              "name":"SINH TỐ VIỆT QUẤT",
+              "Price": 59000,
+              "loved": false,
+              "arrSize":[{"id":123, "nameSize": "Loai L", "PlusPrice": 0, "selected":true},{"id":345, "nameSize": "Loai XL", "PlusPrice": 15000,"selected":false},{"id":1234, "nameSize": "Loai XXL", "PlusPrice": 20000, "selected":false}],
+              "arrTopping":[{"id":3452, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false},{"id":3451, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false},{"id":345, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false},{"id":1231, "nameTopping": "Thêm VIỆT QUẤT ", "PlusPrice": 5000, "selected":false},{"id":1232, "nameTopping": "Thêm đá", "PlusPrice": 5000, "selected":false},],
+              "description":"Uong deo no bung dc dau"
+          },
+           {
+              "id":"123",
+              "image":"https://product.hstatic.net/1000075078/product/white_vnese_coffee_9968c1184d7f4634a9bb9fce7b5ff313_master.jpg",
+              "name":"Bạc Sỉu",
+              "Price": 29000,
+              "loved": false,
+              "arrSize":[{"id":123, "nameSize": "Loai L", "PlusPrice": 0, "selected":true},{"id":345, "nameSize": "Loai XL", "PlusPrice": 15000,"selected":false}],
+              "arrTopping":[],
+              "description":"Theo chân những người gốc Hoa đến định cư tại Sài Gòn, Bạc sỉu là cách gọi tắt của 'Bạc tẩy sỉu phé' trong tiếng Quảng Đông, chính là: Ly sữa trắng kèm một chút cà phê."
+          },
+           {
+              "id":"1233",
+              "image":"https://product.hstatic.net/1000075078/product/cappuccino_master.jpg",
+              "name":"CAPPUCINNO",
+              "Price": 45000,
+              "loved": false,
+              "arrSize":[],
+              "arrTopping":[],
+              "description":"Cappuccino được gọi vui là thức uống một-phần-ba - 1/3 Espresso, 1/3 Sữa nóng, 1/3 Foam"
+          }
+      ]
+    },
+    {
+      "id":2,
+      "tabLabel": "Coffee",
+      "dataProduct":[
+          {
+            "id":"555",
+            "image":"https://product.hstatic.net/1000075078/product/matcha_macchiato.jpg",
+            "name":"Matcha Machiato",
+            "Price": 20000,
+            "loved": false,
+            "arrSize":[{"id":123, "nameSize": "Loai L", "PlusPrice": 0, "selected":true},{"id":345, "nameSize": "Loai XL", "PlusPrice": 15000,"selected":false}],
+            "arrTopping":[{"id":123, "nameTopping": "Extra foanm", "PlusPrice": 5000, "selected":false},{"id":345, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false}],
+            "description":"Uong deo no bung dc dau"
+          },
+          {
+            "id":"55",
+            "image":"https://product.hstatic.net/1000075078/product/matcha_macchiato.jpg",
+            "name":"SINH TỐ VIỆT QUẤT",
+            "Price": 59000,
+            "loved": false,
+            "arrSize":[{"id":123, "nameSize": "Loai L", "PlusPrice": 0, "selected":true},{"id":345, "nameSize": "Loai XL", "PlusPrice": 15000,"selected":false},{"id":1234, "nameSize": "Loai XXL", "PlusPrice": 20000, "selected":false}],
+            "arrTopping":[{"id":3452, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false},{"id":3451, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false},{"id":345, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false},{"id":1231, "nameTopping": "Thêm VIỆT QUẤT ", "PlusPrice": 5000, "selected":false},{"id":1232, "nameTopping": "Thêm đá", "PlusPrice": 5000, "selected":false},],
+            "description":"Uong deo no bung dc dau"
+        },
+         {
+            "id":"123",
+            "image":"https://product.hstatic.net/1000075078/product/white_vnese_coffee_9968c1184d7f4634a9bb9fce7b5ff313_master.jpg",
+            "name":"Bạc Sỉu",
+            "Price": 29000,
+            "loved": false,
+            "arrSize":[{"id":123, "nameSize": "Loai L", "PlusPrice": 0, "selected":true},{"id":345, "nameSize": "Loai XL", "PlusPrice": 15000,"selected":false}],
+            "arrTopping":[],
+            "description":"Theo chân những người gốc Hoa đến định cư tại Sài Gòn, Bạc sỉu là cách gọi tắt của 'Bạc tẩy sỉu phé' trong tiếng Quảng Đông, chính là: Ly sữa trắng kèm một chút cà phê."
+        },
+         {
+            "id":"1233",
+            "image":"https://product.hstatic.net/1000075078/product/cappuccino_master.jpg",
+            "name":"CAPPUCINNO",
+            "Price": 45000,
+            "loved": false,
+            "arrSize":[],
+            "arrTopping":[],
+            "description":"Cappuccino được gọi vui là thức uống một-phần-ba - 1/3 Espresso, 1/3 Sữa nóng, 1/3 Foam"
+        }
+      ]
+    },
+    {
+      "id":3,
+      "tabLabel": "Tea/Soda",
+      "dataProduct":[
+            {
+              "id":"555",
+              "image":"https://product.hstatic.net/1000075078/product/matcha_macchiato.jpg",
+              "name":"Matcha Machiato",
+              "Price": 20000,
+              "loved": false,
+              "arrSize":[{"id":123, "nameSize": "Loai L", "PlusPrice": 0, "selected":true},{"id":345, "nameSize": "Loai XL", "PlusPrice": 15000,"selected":false}],
+              "arrTopping":[{"id":123, "nameTopping": "Extra foanm", "PlusPrice": 5000, "selected":false},{"id":345, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false}],
+              "description":"Uong deo no bung dc dau"
+            },
+            {
+              "id":"55",
+              "image":"https://product.hstatic.net/1000075078/product/matcha_macchiato.jpg",
+              "name":"SINH TỐ VIỆT QUẤT",
+              "Price": 59000,
+              "loved": false,
+              "arrSize":[{"id":123, "nameSize": "Loai L", "PlusPrice": 0, "selected":true},{"id":345, "nameSize": "Loai XL", "PlusPrice": 15000,"selected":false},{"id":1234, "nameSize": "Loai XXL", "PlusPrice": 20000, "selected":false}],
+              "arrTopping":[{"id":3452, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false},{"id":3451, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false},{"id":345, "nameTopping": "Trân châu trắng'", "PlusPrice": 5000,"selected":false},{"id":1231, "nameTopping": "Thêm VIỆT QUẤT ", "PlusPrice": 5000, "selected":false},{"id":1232, "nameTopping": "Thêm đá", "PlusPrice": 5000, "selected":false},],
+              "description":"Uong deo no bung dc dau"
+          },
+           {
+              "id":"123",
+              "image":"https://product.hstatic.net/1000075078/product/white_vnese_coffee_9968c1184d7f4634a9bb9fce7b5ff313_master.jpg",
+              "name":"Bạc Sỉu",
+              "Price": 29000,
+              "loved": false,
+              "arrSize":[{"id":123, "nameSize": "Loai L", "PlusPrice": 0, "selected":true},{"id":345, "nameSize": "Loai XL", "PlusPrice": 15000,"selected":false}],
+              "arrTopping":[],
+              "description":"Theo chân những người gốc Hoa đến định cư tại Sài Gòn, Bạc sỉu là cách gọi tắt của 'Bạc tẩy sỉu phé' trong tiếng Quảng Đông, chính là: Ly sữa trắng kèm một chút cà phê."
+          },
+           {
+              "id":"1233",
+              "image":"https://product.hstatic.net/1000075078/product/cappuccino_master.jpg",
+              "name":"CAPPUCINNO",
+              "Price": 45000,
+              "loved": false,
+              "arrSize":[],
+              "arrTopping":[],
+              "description":"Cappuccino được gọi vui là thức uống một-phần-ba - 1/3 Espresso, 1/3 Sữa nóng, 1/3 Foam"
+          }
+      ]
+    },
+
+  ]
+}

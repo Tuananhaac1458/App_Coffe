@@ -1,0 +1,38 @@
+export const GET_PAGE_LIST = 'GET_PAGE_LIST';
+//////////////////// User Data Action ////////////////////////////
+
+export const GET_USER = 'Auth/GET_USER';
+export const GET_USER_SUCCESS = 'Auth/GET_USER_SUCCESS';
+export const GET_USER_FAIL = 'Auth/GET_USER_FAIL';
+export const LOGIN = 'Auth/LOGIN';
+export const LOGIN_CALLBACK = 'Auth/LOGIN_CALLBACK';
+export const LOGOUT = 'Auth/LOGOUT';
+export const LOGOUT_CALLBACK = 'Auth/LOGOUT_CALLBACK';
+///////////////////////////////////////////////////////////////////
+
+
+//////////////////// Splash Action ////////////////////////////
+
+export const CHECK_NETWORK = 'Splash/CHECK_NETWORK';
+
+
+///////////////////////////////////////////////////////////////////
+
+
+
+
+/////////////////////////////Oderr Detail//////////////////////////////
+export const SET_ODERDETAIL  = 'oderdetail/setoder';
+export const GET_OERDETAIL = 'getoderdetail/getoder';
+
+
+///////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////Love Product//////////////////////////////
+
+export const SET_LOVEPRODUCT  = 'loveproduct/setloveproduct';
+
+
+
+///////////////////////////////////////////////////////////////////
