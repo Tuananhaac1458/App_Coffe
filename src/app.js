@@ -28,9 +28,17 @@ import HomeScreen from './screens/HomeScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import StoreScreen from './screens/StoreScreen'
 import SplashScreen from './screens/SplashScreen'
+import LoginScreen from './screens/LoginScreen'
+import IntroScreen from './screens/IntroScreen'
+import MapScreen from './screens/MapScreen'
+
+
+
 import ModalHome from './screens/Modal/ModalHome'
 import ModalStore from './screens/Modal/ModalStore'
+import ModalProfile from './screens/Modal/ModalProfile'
 
+import ModalSearch from './screens/Modal/ModalSearch'
 
 import { COLOR_HIGTHPERLINK } from './util/ValueString'
 import { fadeIn } from 'react-navigation-transitions';
@@ -98,6 +106,14 @@ const StoreScreenStack  = createStackNavigator(
           header: null,
         }
       },
+    },
+    ModalSearch:{
+      screen: ModalSearch,
+      navigationOptions:({ navigation }) => {
+        return{
+          header: null,
+        }
+      },
     }
   },
   {     
@@ -112,7 +128,7 @@ const StoreScreenStack  = createStackNavigator(
   },
 )
 
-
+//////////////////////////////////////////
 const ProfileScreenStack  = createStackNavigator(
   {
     ProFile: {
@@ -125,7 +141,46 @@ const ProfileScreenStack  = createStackNavigator(
           }
         }
         return{
-            header: <HeaderBar { ...propsDefault }/>
+            header: null
+        }
+      }
+    },
+    ModalProfile:{
+      screen: ModalProfile,
+      navigationOptions:({ navigation }) => {
+        return{
+          header: null,
+        }
+      },
+    }
+    // DetailHome:{
+    //   screen: DetailHome
+    // }
+  },
+  {
+      defaultNavigationOptions: {
+        headerTintColor: '#fff',
+        headerStyle: {
+          backgroundColor: '#f20',
+        },
+      },
+  },
+)
+
+//////////////////////////////////////////
+const MapScreenStack  = createStackNavigator(
+  {
+    MapScreen: {
+      screen: MapScreen,
+      navigationOptions:({ navigation }) => {
+        const propsDefault = {
+          ...navigation,
+          Router:{
+            routeName:navigation.state.routeName
+          }
+        }
+        return{
+            header: null
         }
       }
     },
@@ -142,8 +197,6 @@ const ProfileScreenStack  = createStackNavigator(
       },
   },
 )
-
-
 const TabNavigator = createBottomTabNavigator(  
   {
       Home:{
@@ -170,20 +223,39 @@ const TabNavigator = createBottomTabNavigator(
           }
         }
       },
+      Map:{
+        screen: MapScreenStack,
+        navigationOptions: ({ navigation }) => {
+          return{
+            tabBarVisible: navigation.state.index === 0,
+            tabBarLable:'MapScreen',
+            header: null,
+            tabBarIcon: ({tintColor}) => (
+              <Iconn name ="map-pin" color={tintColor} size ={24} />
+            )
+          }
+        }
+        
+      },
       ProFile:{
         screen: ProfileScreenStack,
-        navigationOptions:{
-          tabBarLable:'ProFile',
-          tabBarIcon: ({tintColor}) => (
-            <Iconn name ="user" color={tintColor} size ={24} />
-          )
+        navigationOptions: ({ navigation }) => {
+          return{
+            tabBarVisible: navigation.state.index === 0,
+            tabBarLable:'ProFile',
+            header: null,
+            tabBarIcon: ({tintColor}) => (
+              <Iconn name ="user" color={tintColor} size ={24} />
+            )
+          }
         }
+        
       }
       
 
   },
   {
-      order: ['Home','Store','ProFile'],
+      order: ['Home','Store','Map','ProFile'],
       navigationOptions: ({ navigation }) => {
         const { routeName } = navigation.state.routes
         [ navigation.state.index ];
@@ -206,8 +278,10 @@ const TabNavigator = createBottomTabNavigator(
 
 //////
 const AppSwitchNavigator = createSwitchNavigator(
-{
+    {
         Slapscreen:SplashScreen,
+        IntroScreen:IntroScreen,
+        LoginScreen:LoginScreen,
         Dashboard: TabNavigator
     },
   {

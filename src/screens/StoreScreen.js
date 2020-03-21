@@ -230,6 +230,7 @@ class StoreScreen extends Component {
     console.log("dataProductStore",dataProductStore)
 		return(
       <View style={styles.container}>
+      
         <SafeAreaView>
             <StatusBar 
               barStyle="dark-content" 
@@ -241,13 +242,13 @@ class StoreScreen extends Component {
               networkInfo = {this.props.gateProps.networkInfo}
             />
 
-            <AddressCustomer/>
-            
             <View style={styles.driver}>
             </View>
 
             <Filter
               setDataToFuitler = {this.setDataToFuitler}
+              dataProduct={this.state.dataProductStore}
+              navigation ={this.props.navigation}
             />
 
             <View style={styles.driver}>

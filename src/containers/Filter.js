@@ -63,7 +63,7 @@ export default class Filter extends Component {
 
 	render(){
     const HeaderHight = Header.HEIGHT;
-  	const { setDataToFuitler } = this.props
+  	const { setDataToFuitler, navigation, dataProduct } = this.props
     return(
 			<View 
         style={[styles.container, {height: HeaderHight}]}
@@ -115,18 +115,26 @@ export default class Filter extends Component {
           </TouchableHighlight>
 
       </View>
-        <View 
-          style={{
-            height:"100%",
-            alignItems:'center',
-            justifyContent:'center'
+        <TouchableHighlight
+          onPress={() => {
+            navigation.navigate('ModalSearch',{
+              dataProductStore: dataProduct
+            })
           }}
-
         >
-          <Iconnn
-           name ="search1" size ={20} style={{marginLeft:10,}} 
-          />
-        </View>
+          <View 
+            style={{
+              height:"100%",
+              alignItems:'center',
+              justifyContent:'center'
+            }}
+
+          >
+            <Iconnn
+             name ="search1" size ={20} style={{marginLeft:10,}} 
+            />
+          </View>
+        </TouchableHighlight>
       </View>
 		)
 	}

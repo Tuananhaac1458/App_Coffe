@@ -150,8 +150,7 @@ const styles = StyleSheet.create({
 // export default ScrollViewOder;
 
 const mapStateToProps = state => ({
-      oderDetail: state.oderDetail
-
+    oderDetail: state.oderDetail
 });
 
 const ActionCreators = Object.assign(

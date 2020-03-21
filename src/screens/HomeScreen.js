@@ -185,6 +185,7 @@ class HomeScreen extends Component {
 
   componentWillUnmount() {
      // this.backHandler.remove()
+     console.log('iiiiiiiiiiiii->>>>>>>>>>>>.')
   }
 
 	// incrementCount() {

@@ -106,8 +106,8 @@ class ButtonOder extends Component {
                 style={styles.boxTouchable}
                 underlayColor="rgba(255,255,0,0.2)"
                 onPress = {() => {
-                    setOderInvoice({...dataProduct,amount: this.state.amount},invoice)
                     closeModal();
+                    setOderInvoice({...dataProduct,amount: this.state.amount},invoice)
                 }}
                 >
                   <Text

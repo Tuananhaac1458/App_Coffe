@@ -12,11 +12,13 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as pageActions from '../redux/actions/SplashAction';
+import SplashScreen from 'react-native-splash-screen'
+import {  ReadFromLocalDB } from '../helpers/AsyncStorage';
 
 
 
 
-class SplashScreen extends Component {
+class SplashScreens extends Component {
 	constructor(props) {
 	  super(props);
 	  this.state = { 
@@ -29,25 +31,41 @@ class SplashScreen extends Component {
 	// }
 
 	componentDidMount() {
-		this.props.dispatch.getDataProps();
+		SplashScreen.hide();
+
+
+
+		ReadFromLocalDB('doneIntro').then(e => {
+			this.props.dispatch.getDataProps();
+			if(e === 'true'){
+				ReadFromLocalDB('skiplogin').then(a => {
+					if(a === 'true'){
+						setTimeout(() => {
+							this.props.navigation.navigate('Dashboard')
+						},2000)	
+						return
+					}
+					setTimeout(() => {
+						this.props.navigation.navigate('LoginScreen')
+					},2000)	
+				})
+			}else{
+				setTimeout(() => {
+					this.props.navigation.navigate('IntroScreen')
+				},2000)
+			}
+		})
 			
+
 	}
 
 	componentDidUpdate(prevProps, prevState) {
 		if(!prevProps.gateProps.networkInfo){
 			return
 		}
-		if(prevState.imgload === false){
-			setTimeout(() => {
-				this.props.navigation.navigate('Dashboard')
-			},2000)
-		}else{
-			setTimeout(() => {
-				this.props.navigation.navigate('Dashboard')
-			},4000)
-		}
 	}
 	render(){
+		console.log('gateProps===>',this.props.gateProps)
 		return(
 			<View style={{ flex: 1, alignItems:'center', justifyContent:'center', backgroundColor:'black'}}>
 				<StatusBar 
@@ -91,4 +109,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
-export default connect(state => mapStateToProps, mapDispatchToProps)(SplashScreen);
+export default connect(state => mapStateToProps, mapDispatchToProps)(SplashScreens);

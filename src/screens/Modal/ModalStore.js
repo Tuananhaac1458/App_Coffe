@@ -63,12 +63,15 @@ class ModalStore extends Component {
       // tabBarVisible: false,
   };
 
-  componentDidUpdate(prevProps, prevState) {
-    if(this.props.oderDetail.length === 0 && this.state.visible){
-      this.setState({
-        visible : false
-      })
+  shouldComponentUpdate(nextProps, nextState){
+    if(nextProps.oderDetail.length < 1){
+      this.props.navigation.goBack()
+      return false
     }
+    return true
+  }
+
+  componentDidUpdate(prevProps, prevState) {
   }
 
     ///// view modal contacts ///////////
@@ -237,7 +240,10 @@ class ModalStore extends Component {
 
 
   renderInvoice = (oderDetail) => {
-    let totalMoney = this.renderMoney(oderDetail);
+    let totalMoney = 0;
+    if(oderDetail.length > 0){
+      totalMoney = this.renderMoney(oderDetail);
+    }
     return(
       <ScrollView >
       <View style={styles.containerModal}>
@@ -337,34 +343,39 @@ class ModalStore extends Component {
           </Text>
         </View>
 
-
-        <View style={styles.boxOderDetail}>
-          {
-            oderDetail.map((product, index) => {
-              return(
-                <RenderRowProduct
-                  key={index}
-                  product = { product }
-                  setOderDetail = {this.props.dispatch.setOderDetail}
-                  setLoveProduct = {this.props.dispatch.setLoveProduct}
+        {
+             <View style={styles.boxOderDetail}>
+              { 
+                (Array.isArray(oderDetail)) && (
+                  oderDetail.map((product, index) => {
+                  console.log('asd')
+                  return(
+                      <RenderRowProduct
+                        key={index}
+                        product = { product }
+                        setOderDetail = {this.props.dispatch.setOderDetail}
+                        setLoveProduct = {this.props.dispatch.setLoveProduct}
+                      />
+                    )    
+                  })   
+                )
+              }
+               <View style={{flexDirection:'row',}}>
+                <Iconn 
+                  name = {"note"}
+                  size ={25} 
+                  color = {'gray'}
+                /> 
+                <TextInput
+                  style={{ height: 40, flex:1, }}
+                  placeholder="Ghi chú đặc biệt"
+                  value={this.state.noteAttention}
+                  onChangeText={(noteAttention) => this.setState({noteAttention})}
                 />
-              )    
-            })
-          }
-           <View style={{flexDirection:'row',}}>
-            <Iconn 
-              name = {"note"}
-              size ={25} 
-              color = {'gray'}
-            /> 
-            <TextInput
-              style={{ height: 40, flex:1, }}
-              placeholder="Ghi chú đặc biệt"
-              value={this.state.noteAttention}
-              onChangeText={(noteAttention) => this.setState({noteAttention})}
-            />
-          </View>
-        </View>
+              </View>
+            </View>
+        }
+       
         
 
         <View style={styles.boxPayment}>
@@ -420,7 +431,11 @@ class ModalStore extends Component {
 
   render(){
     const { oderDetail } = this.props;
-    let totalMoney = this.renderMoney(oderDetail);
+    console.log('oderDetail=>>>>',oderDetail)
+    let totalMoney = 0;
+    if(oderDetail.length > 0){
+      totalMoney = this.renderMoney(oderDetail);
+    }
       return(
         <View style={ styles.container}>
           <HeaderBar 
@@ -429,8 +444,9 @@ class ModalStore extends Component {
               onLoading={false}
               typeArrow = {'close'}
           />
-
-          {this.renderInvoice(oderDetail)}
+          {
+              this.renderInvoice(oderDetail)
+          }
 
           <ButtonBuy
             money={RenderViewMoney(totalMoney)}

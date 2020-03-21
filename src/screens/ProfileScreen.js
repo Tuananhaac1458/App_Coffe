@@ -5,48 +5,54 @@ import {
   Button,
   SafeAreaView,
   ScrollView,
-  Image,
   Dimensions,
   ImageBackground,
   Animated,
-  StatusBar,
   TouchableHighlight,
   Alert,
   BackHandler,
   PermissionsAndroid,
-  Platform
+  Platform,
+  ActivityIndicator
 } from 'react-native';
+import {  Image,Avatar, ListItem } from 'react-native-elements';
 
 import Loading from '../components/Loading';
 
 import Modal, { SlideAnimation } from 'react-native-modals';
-import Oderdetail from '../containers/Oderdetail'
-import { FuilterLoop, RemoveObjectonArrayWithObjectKey } from '../util/initArray';
-import AddressCustomer from '../containers/AddressCustomer';
-
-import ApiClient from '../helpers/ApiClient';
-
 import Iconnn from 'react-native-vector-icons/AntDesign'
 import Iconn from 'react-native-vector-icons/MaterialCommunityIcons'
+ 
+const BG_IMAGE = require('../img/bg_screen4.jpg');
 
 
 const widthDefalt = Dimensions.get('window').width;
 const heightDefalt = Dimensions.get('window').height; 
 const Realm = require('realm');
 
+const window = Dimensions.get('window');
 
-
+const list = [
+  {
+    title: 'Appointments',
+    icon: 'av-timer'
+  },
+  {
+    title: 'Trips',
+    icon: 'flight-takeoff'
+  },
+]
 
 export default class ProfileScreen extends Component {
-	constructor(props) {
-	    super(props);
-	    this.sound = null;
-	    this.state = { 
-	      Loading: true,
-    		visible: false,
-    		handleBackPress: false,
+  constructor(props) {
+      super(props);
+      this.sound = null;
+      this.state = { 
+        Loading: true,
+        visible: false,
+        handleBackPress: false,
         realm: []
-    	}
+      }
 
   }
 
@@ -58,55 +64,111 @@ export default class ProfileScreen extends Component {
     componentWillUnmount() {
   
   }
-	render(){
-    const ApiClient2 = new ApiClient();
-    const xx =  {
-          "id":10,
-          "type":["Coffe"],
-          "image":"https://product.hstatic.net/1000075078/product/coldbrewmilk_09db086189ce43d5bb78172613af57dc_master.jpg",
-          "name":"COLD BREW SỮA TƯƠI",
-          "price": 50000,
-          "loved": false,
-          "arrSize":[],
-          "arrTopping":[],
-          "discription":"Thanh mát và cân bằng với hương vị cà phê nguyên bản 100% Arabica Cầu Đất cùng sữa tươi thơm béo cho từng ngụm tròn vị, hấp dẫn."
-      }
-    const info = this.state.realm
+
+  onPressProject = (type) => {
+    const { navigation } = this.props; 
+    if(type === undefined){
+      return
+    }
+    if(type === 'login'){
+       navigation.navigate('LoginScreen')
+    }
+    if (type === 'setting') {
+       navigation.navigate('ModalProfile',{type: 'setting'})
+    }
+    if(type === 'aboutus'){
+       navigation.navigate('ModalProfile',{type: 'aboutus'})
+    }
+    if(type === 'help'){
+       navigation.navigate('ModalProfile',{type: 'help'})
+    }
+    if(type === 'cart'){
+       navigation.navigate('ModalProfile',{type: 'cart'})
+    }
+    if(type === 'ttcn'){
+       navigation.navigate('ModalProfile',{type: 'ttcn'})
+    }
+    return
+  }
+  render(){
     return(
-      <View style={{marginTop:15,position:"relative",flex:1,}}>
+      <ScrollView>
+      <View style={{position:"relative",flex:1,}}>
+
+        {
+          (this.state.isLogin) ? 
+          (
+            <View style={{width:widthDefalt, height:300,  justifyContent: 'center', alignItems:'center', backgroundColor:'gray' }}>
+              <View style={{width:200, height:100,  justifyContent: 'center'}}>
+                <Image
+                  source={{ uri: 'https://miahome.vn/media/logo/default/miahome-log.png' }}
+                  style={{ width: 200, height: 100 }}
+                  resizeMode="stretch"
+                  PlaceholderContent={<ActivityIndicator />}
+                />
+              </View>
+              <Text style={{marginTop:10,fontSize: 16,color:'white' }}>
+                    Chuyên cung cấp tranh chất lượng cao
+               </Text>  
+            </View>
+          ) : 
+          (
+            <ImageBackground style={{width:widthDefalt, height:300,  justifyContent: 'center', alignItems:'center'}} source={BG_IMAGE}>
+              <View style={{width:200, height:100,  justifyContent: 'center',alignItems:'center', }}>
+               <Avatar
+                size="xlarge"
+                source={{
+                  uri:
+                    'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+                }}
+                rounded
+                onEditPress={() => console.log("Work2s!")}
+                title="CR"
+                activeOpacity={0.7}
+                showEditButton
+              />
+              </View>
+            </ImageBackground>
+          )
+
+        }        
+        <TouchableHighlight
+          onPress={() => this.onPressProject('ttcn')}
+          underlayColor={'transparent'}
+        >
          <View style={{ paddingHorizontal:15,alignItems:'center',flexDirection: 'row',height:56, width:widthDefalt, backgroundColor:'white'}}>
-            <Iconnn 
-                  name = {"user"}
-                  size ={30} 
-                  color= {'black'}
-                />      
+            <Iconn 
+              name = {"account-outline"}
+              size ={30} 
+              color= {'black'}
+            />      
              <Text style={{marginLeft:15}}>
                 Thông tin tài khoản
              </Text>   
         </View> 
+        </TouchableHighlight>
+              {/*/
 
+        <TouchableHighlight
+          underlayColor={'transparent'}
+        >
           <View style={{ paddingHorizontal:15,alignItems:'center',flexDirection: 'row',height:56, width:widthDefalt, backgroundColor:'white'}}>
-            <Iconn 
-                  name = {"playlist-music-outline"}
-                  size ={30} 
-                  color= {'black'}
-                />      
-             <Text style={{marginLeft:15}}>
-                Nhạc đang phát
+              <View style={{ position:'absolute', flex:1, width:widthDefalt, marginLeft:15}}>
+                
+                <Cart/>
+              
+              </View>      
+             <Text style={{marginLeft:45}}>
+                Cart
              </Text>   
         </View> 
+        </TouchableHighlight>
+             /*/ }  
 
-          <View style={{ paddingHorizontal:15,alignItems:'center',flexDirection: 'row',height:56, width:widthDefalt, backgroundColor:'white'}}>
-            <Iconn 
-                  name = {"book-outline"}
-                  size ={30} 
-                  color= {'black'}
-                />      
-             <Text style={{marginLeft:15}}>
-                Lịch sử
-             </Text>   
-        </View> 
-
+         <TouchableHighlight
+          onPress={() => this.onPressProject('help')}
+          underlayColor={'transparent'}
+         >
           <View style={{ paddingHorizontal:15,alignItems:'center',flexDirection: 'row',height:56, width:widthDefalt, backgroundColor:'white'}}>
             <Iconn 
                   name = {"lifebuoy"}
@@ -114,11 +176,15 @@ export default class ProfileScreen extends Component {
                   color= {'black'}
                 />      
              <Text style={{marginLeft:15}}>
-                Giúp đỡ
+                Help!
              </Text>   
         </View> 
+        </TouchableHighlight>
 
-
+        <TouchableHighlight
+          onPress={() => this.onPressProject('setting')}
+          underlayColor={'transparent'}
+        >
          <View style={{ paddingHorizontal:15,alignItems:'center',flexDirection: 'row',height:56, width:widthDefalt, backgroundColor:'white'}}>
             <Iconn 
                   name = {"settings-outline"}
@@ -126,16 +192,52 @@ export default class ProfileScreen extends Component {
                   color= {'black'}
                 />      
              <Text style={{marginLeft:15}}>
-                Cài đặt
+                Setting
              </Text>   
         </View>
+        </TouchableHighlight>
 
-        <View style={{position:"absolute",bottom:5}}>
+        <TouchableHighlight
+          onPress={() => this.onPressProject('aboutus')}
+          underlayColor={'transparent'}
+        >
+         <View style={{ paddingHorizontal:15,alignItems:'center',flexDirection: 'row',height:56, width:widthDefalt, backgroundColor:'white'}}>
+            <Iconn 
+                  name = {"information-outline"}
+                  size ={30} 
+                  color= {'black'}
+                />      
+             <Text style={{marginLeft:15}}>
+                About us
+             </Text>   
+        </View>
+        </TouchableHighlight>
+
+        <TouchableHighlight
+          onPress={() => this.onPressProject('login')}
+          underlayColor={'transparent'}
+        >
+         <View style={{ paddingHorizontal:15,alignItems:'center',flexDirection: 'row',height:56, width:widthDefalt, backgroundColor:'white'}}>
+            <Iconn 
+                  name = {(this.state.isLogin) ? "login" : "logout"}
+                  size ={30} 
+                  color= {'black'}
+                />      
+             <Text style={{marginLeft:15}}>
+                {(this.state.isLogin) ? 'Login' : 'Logout'}
+             </Text>   
+        </View>
+        </TouchableHighlight>
+
+
+
+        <View style={{position:"absolute",bottom:0, width:widthDefalt, alignItems:'flex-end', paddingRight:10}}>
           <Text style={{marginLeft:15, color:'gray'}}>
                 Americano V.0.1
              </Text>
         </View> 
       </View>
+      </ScrollView>
     )
     return (
       <View >
@@ -173,7 +275,7 @@ export default class ProfileScreen extends Component {
         />
       </View>
     )
-	}
+  }
 
 }
 

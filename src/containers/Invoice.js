@@ -94,11 +94,11 @@ class Invoice extends Component {
   render(){
     console.log("this.props odered==>", this.props)
     const { oderDetail } = this.props;
-    return(oderDetail.length > 0) && (
+    return (oderDetail.length > 0) && (
       <View style={styles.container}>
         <TouchableHighlight
           onPress = {() => this.setVisiModal()}
-          underlayColor="rgba(236, 225, 225,0.5)"
+          underlayColor="transparent"
         >
            <View
             style={styles.boxView}

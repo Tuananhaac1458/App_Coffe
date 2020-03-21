@@ -48,8 +48,11 @@ const heightDefalt = Dimensions.get('window').height;
       })
     }
   }
-  renderModal = (dataProduct) => {
+  componentWillUnmount(){
+    console.log('unmonut-----> rwo')
+  }
 
+  renderModal = (dataProduct) => {
     return (
       <View style={{flex:1}}>
       <Modal
@@ -73,6 +76,7 @@ const heightDefalt = Dimensions.get('window').height;
   }
 
   closeModal = () => {
+    console.log('123444444444444+.')
     this.setState({
       visible: false
     })
@@ -120,7 +124,6 @@ const heightDefalt = Dimensions.get('window').height;
 
   render() {
     const { product } = this.props;
-
     return (
         <View >
          <TouchableHighlight

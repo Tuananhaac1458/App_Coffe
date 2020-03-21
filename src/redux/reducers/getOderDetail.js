@@ -1,9 +1,7 @@
 import { SET_ODERDETAIL, GET_OERDETAIL } from '../constants';
 
 
-const initialState = {
-		quality : 1,
-};
+const initialState = [];
 
 const getOderDetail = (state = initialState, action) => {
 	switch(action.type) {

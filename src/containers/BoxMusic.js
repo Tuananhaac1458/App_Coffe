@@ -43,6 +43,7 @@ class BoxMusic extends Component {
   constructor(props) {
     super(props);
     this.sound = null;
+    this.amiationImage = null;
     this.state = { 
       spinAnim: new Animated.Value(0),
       onLoadMusic: 0,
@@ -70,8 +71,11 @@ class BoxMusic extends Component {
     this.autoPlay();
   }
 
-  animationImage = () => {
-     Animated.loop(Animated.timing(
+  animationImage = (oder) => {
+    if(this.amiationImage !== null){
+      this.amiationImage.stop()
+    }
+    this.amiationImage = Animated.loop(Animated.timing(
     this.state.spinAnim,
       {
         toValue: 1,
@@ -79,7 +83,8 @@ class BoxMusic extends Component {
         easing: Easing.linear,
         useNativeDriver: true,
       }
-    )).start();
+    ));
+    this.amiationImage.start();
   }
   // onLoadMusic = () => {
   //       if(this.state.onLoadMusic === 0){
@@ -104,14 +109,14 @@ class BoxMusic extends Component {
       return
     }
     if(this.state.onLoadMusic === 1){
-      this.animationImage()
       return
     }
     this.autoPlay()
   }
 
   componentWillUnmount() {
-    this.sound.stop()
+    this.sound.stop();
+    this.amiationImage.stop()
   }
   autoPlay = () => {
     if(this.state.onLoadMusic === 1 || this.state.onLoadMusic === 2  ){
